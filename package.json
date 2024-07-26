@@ -1,18 +1,20 @@
 {
-	"name": "hello-bun2",
-	"module": "src/index.ts",
-	"type": "module",
-	"devDependencies": {
-		"@biomejs/biome": "^1.8.3",
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
-	"scripts": {
-		"ex0": "bun ./src/index.ts",
-		"format": "biome format --write .",
-		"lint": "biome lint .",
-		"check": "biome check --write ."
-	}
+  "name": "hello-bun2",
+  "module": "dist/esm/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/bun": "latest",
+    "bun-plugin-dts": "^0.2.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "ex0": "bun ./src/index.ts",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --write .",
+    "build": "bun ./build.ts"
+  }
 }
